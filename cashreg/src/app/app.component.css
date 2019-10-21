@@ -1,0 +1,17 @@
+.menu, .footer{
+    height:50px;
+}
+
+.main{
+    position: absolute;
+}
+
+.footer{
+    position: fixed;
+    bottom:0px;
+    width: 100%;
+}
+
+.text{
+    font-size: 1rem;
+}

@@ -1,0 +1,35 @@
+<div class="container-fluid" style="margin-top:50px;">
+    <div class="row">
+        <div class="col-6">
+
+          <p *ngIf="Consommable.length <= 0" class="no-data text-center">There is no consommable added yet!</p>
+
+          <div class="container-fluid" *ngIf="Consommable.length > 0">
+
+            <div class="row bg-secondary justify-content-center" >
+                <!-- Consommable list -->
+                <div class="col-3 rounded-lg bg-info text-white m-3 conso text-center align-self-center" *ngFor="let consommable of Consommable; let i = index">
+                    <p *ngStyle="getColor({{consommable.type}})">{{consommable.name}} ({{consommable.price}})</p>
+                </div>
+            </div>
+
+          </div>
+            <!-- No data message -->
+
+
+        </div>
+
+        <div class="col-6 bg-success">
+            <div class="row bg-info h-25">
+                TOTAL
+            </div>
+            <div class="row bg-secondary h-50">
+                PANIER
+            </div>
+            <div class="row h-25">
+                <div class="col-6 text-center bg-danger h-100">Effacer</div>
+                <div class="col-6 text-center bg-white h-100"><p class="my-auto">Ajouter à la note</p></div>
+            </div>
+        </div>
+    </div>
+</div>
